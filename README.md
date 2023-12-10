@@ -1,3 +1,4 @@
 # CringeStory
 Very cringe story about Kontantin
-- No;
+
+Хорошего дня! Счастья! Здоровья! Успехов в личной жизни!
