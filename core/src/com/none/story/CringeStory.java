@@ -8,20 +8,22 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 
 public class CringeStory extends Game {
-	OrthographicCamera camera;
-	int SCR_WIDTH = 1280;
-	int SCR_HEIGHT = 720;
 	GameScreen gameScreen;
 
 	@Override
 	public void create () {
-		camera = new OrthographicCamera();
-		camera.setToOrtho(false, SCR_WIDTH, SCR_HEIGHT);
 		gameScreen = new GameScreen(this);
 		setScreen(gameScreen);
+//		camera.update();
+//		batch.setProjectionMatrix(camera.combined);
+//		Texture back = new Texture("main_background.jpg");
+//		batch.begin();
+//		batch.draw(back, 0, 0, SCR_WIDTH, SCR_HEIGHT);
+//		batch.end();
 	}
 	
 	@Override
 	public void dispose () {
+//		gameScreen.dispose();
 	}
 }
