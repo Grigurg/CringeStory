@@ -21,18 +21,23 @@ public class LoadScreen extends ScreenAdapter {
         this.gameScreen = gameScreen;
         batch = new SpriteBatch();
         background = new Texture("main_background.jpg");
-        font = new BitmapFont();
-        font.getData().scale(5f);
-        font.setColor(0, 0, 0, 1);
-        font.
+
+//        font = new BitmapFont();
+//        font.getData().scale(5f);
+//        font.setColor(0, 0, 0, 1);
+//        font.
 //        startButton = new TextButton("yeah", Skin);
     }
 
     @Override
+    public void show() {
+        batch.setProjectionMatrix(gameScreen.camera.combined);
+    }
+    @Override
     public void render(float delta) {
+        gameScreen.camera.update();
         batch.begin();
         batch.draw(background, 0, 0, GameScreen.SCR_WIDTH, GameScreen.SCR_HEIGHT);
-        font.getData().
         batch.end();
     }
 
