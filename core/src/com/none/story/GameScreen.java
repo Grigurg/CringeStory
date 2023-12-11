@@ -9,6 +9,7 @@ public class GameScreen extends ScreenAdapter {
     OrthographicCamera camera;
     LoadScreen loadScreen;
     CringeStory cringeStory;
+
     public static final int SCR_WIDTH = 1920;
     public static final int SCR_HEIGHT = 1024;
 
