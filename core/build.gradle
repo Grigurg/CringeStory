@@ -1,5 +1,8 @@
 sourceCompatibility = 1.7
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+//dependencies {
+//    api "com.badlogicgames.gdx:gdx-freetype:19"
+//}
 
 sourceSets.main.java.srcDirs = [ "src/" ]
 

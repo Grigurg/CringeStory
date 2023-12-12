@@ -21,7 +21,7 @@ public class LoadScreen extends ScreenAdapter {
     LoadScreen(GameScreen gameScreen) {
         this.gameScreen = gameScreen;
         batch = new SpriteBatch();
-        background = new Texture("main_background.jpg");
+        background = new Texture("img.png");
         buttonStart = new TextButton(700, 150, "Start");
 //        font = new BitmapFont();
 //        font.getData().scale(5f);
