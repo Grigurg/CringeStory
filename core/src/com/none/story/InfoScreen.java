@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.utils.Json;
 
 public class InfoScreen implements Screen {
     Texture background;
@@ -16,11 +17,12 @@ public class InfoScreen implements Screen {
     BitmapFont font;
     MyShapeRenderer shapeRenderer;
     int counter = 0;
-    InfoScreen(GameScreen gameScreen, String back, String text) {
-        background = new Texture(back);
+    Json json;
+    InfoScreen(GameScreen gameScreen, Scene scene) {
+        background = new Texture(scene.background);
         batch = new SpriteBatch();
         this.gameScreen = gameScreen;
-        this.text = text;
+        json = scene.js;
         message = "";
         font = GameScreen.getFont();
         shapeRenderer = new MyShapeRenderer();

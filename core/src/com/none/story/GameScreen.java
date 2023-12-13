@@ -8,9 +8,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
-import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
-
-import jdk.javadoc.internal.doclets.formats.html.Table;
 
 public class GameScreen extends ScreenAdapter {
     SpriteBatch batch;
@@ -24,26 +21,25 @@ public class GameScreen extends ScreenAdapter {
     GameScreen(CringeStory cringeStory) {
 
         this.cringeStory = cringeStory;
-        String text = "Hello everyone";
-        loadScreen = new InfoScreen(this, "main_background2.jpg", text);
+        String text = "Karoche pocher";
+        Scene scene = new Scene();
+        loadScreen = new InfoScreen(this, {Scene("")});
         batch = new SpriteBatch();
         camera = new OrthographicCamera();
     }
     @Override
     public void show() {
         camera.setToOrtho(false, SCR_WIDTH, SCR_HEIGHT);
-//        batch.begin();
-//        font.draw(batc
-//        h, "Hello", 50, 50);
-//        batch.end();
-        cringeStory.setScreen(loadScreen);
+        Screensaver screen = new Screensaver();
+        cringeStory.setScreen(screen);
+//        cringeStory.setScreen(loadScreen);
     }
 
     public static BitmapFont getFont() {
         FreeTypeFontGenerator fontGenerator =
-                new FreeTypeFontGenerator(Gdx.files.internal("OpenSans.ttf"));
+                new FreeTypeFontGenerator(Gdx.files.internal("font.ttf"));
         FreeTypeFontGenerator.FreeTypeFontParameter fontParameters = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        fontParameters.size = 50;
+        fontParameters.size = 100;
         fontParameters.color = Color.WHITE;
         fontParameters.borderWidth = 2;
         fontParameters.borderColor = Color.BLACK;
