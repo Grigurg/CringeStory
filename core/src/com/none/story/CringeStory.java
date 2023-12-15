@@ -62,7 +62,7 @@ public class CringeStory extends Game {
 	}
 
 	public static BitmapFont getFont() {
-		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("ch/ISOCPEUR_it.ttf"));
+		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("ch/cuyabra-Regular [RUS by Zephyrus].ttf"));
 		FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
 		parameter.color = Color.WHITE;
 		parameter.size = 100;
