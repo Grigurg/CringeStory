@@ -27,10 +27,10 @@ public class CringeStory extends Game {
 
 	void init() {
 		screens = new ArrayList<>();
-		screens.add(new MyScreen(this, "main_background2.jpg", "Привет"));
-		screens.add(new ButtonScreen(this, "main_background.jpg", "Приветик", new String[]{"vhvhvhjvh", "Button2"}));
-		screens.add(new MyScreen(this, "img.png", "Пртивет4"));
-		screens.add(new MyScreen(this, "main_background2.jpg", "ВОт е привет"));
+		screens.add(new MyScreen(this, "main_background2.jpg", "Сцена1"));
+		screens.add(new ButtonScreen(this, "ch/Без имени-4 копия.png", "Сцена2", new String[]{"Вариант2", "Вариант1"}));
+		screens.add(new MyScreen(this, "img.png", "Сцена3"));
+		screens.add(new MyScreen(this, "main_background2.jpg", "Сцена4"));
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class CringeStory extends Game {
 	}
 
 	public static BitmapFont getFont() {
-		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("21066.ttf"));
+		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("ch/ISOCPEUR_it.ttf"));
 		FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
 		parameter.color = Color.WHITE;
 		parameter.size = 100;

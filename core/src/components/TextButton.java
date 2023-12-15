@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+import com.none.story.CringeStory;
 
 public class TextButton {
 
@@ -30,9 +31,7 @@ public class TextButton {
         this.text = text;
         this.x = x;
         this.y = y;
-
-        font = new BitmapFont(Gdx.files.internal("ch/font.fnt"), Gdx.files.internal("ch/font.png"), false);
-
+        font = CringeStory.getFont();
 //        font.getData().scale(5f);
 //        font.setColor(Color.WHITE);
 
@@ -40,9 +39,9 @@ public class TextButton {
         textWidth = (int) gl.width;
         textHeight = (int) gl.height;
 
-        texture = new Texture("button_bg.png");
-        buttonWidth = texture.getWidth();
-        buttonHeight = texture.getHeight();
+        texture = new Texture("ch/Screenshot_20231215-135009_Yandex_Start-transformed.png");
+        buttonWidth = (int) (texture.getWidth() * 2.3);
+        buttonHeight = (int) (texture.getHeight() * 2.3);
 
         textX = x + (buttonWidth - textWidth) / 2;
         textY = y + (buttonHeight + textHeight) / 2;
